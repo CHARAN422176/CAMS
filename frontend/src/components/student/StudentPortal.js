@@ -30,7 +30,7 @@ const StudentPortal = () => {
             const token = localStorage.getItem('token');
             const config = { headers: { 'x-auth-token': token } };
             // CORRECTED URL: Added port and fixed the endpoint path
-            await axios.post('https://cams-nf34.onrender.com/student/log-exit', { outingType }, config);
+            await axios.post('https://cams-nf34.onrender.com/api/student/log-exit', { outingType }, config);
             
             alert(`Your ${outingType} outing has been logged!`);
             setStatus(`${outingType} Outing`);

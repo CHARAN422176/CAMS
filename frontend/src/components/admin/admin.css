@@ -1,0 +1,118 @@
+.dashboard-container {
+  max-width: 1300px; /* Slightly wider for more content */
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-lg);
+}
+
+.dashboard-title {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-3xl);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  border-left: 6px solid var(--accent-color); /* More pronounced accent */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px); /* More noticeable lift */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.stat-info p {
+  color: var(--text-muted);
+  font-size: var(--font-base);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.stat-info span {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: var(--text-light);
+  display: block; /* Ensures number is on its own line */
+}
+
+.lists-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.user-list {
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  min-height: 350px; /* Ensure lists have some height */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+.user-list h3 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color); /* Thicker separator */
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+  font-size: var(--font-xl);
+}
+
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 400px; /* Scrollable if many users */
+  overflow-y: auto;
+  padding-right: var(--spacing-sm); /* Space for scrollbar */
+}
+
+.user-list li {
+  padding: var(--spacing-sm) 0;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--primary-bg); /* Use darker color for subtle line */
+  font-size: var(--font-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar styles for dark theme */
+.user-list ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-list ul::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+  border-radius: 10px;
+}
+
+.user-list ul::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.user-list ul::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

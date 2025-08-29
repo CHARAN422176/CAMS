@@ -1,0 +1,101 @@
+/* Google Font Import (already in public/index.html) */
+/* Poppins for general text */
+/* Optional: Montserrat or Roboto for headings if you want variety */
+
+:root {
+  /* Color Palette - Deeper, richer tones */
+  --primary-bg: #1a1a2e; /* Darkest background */
+  --secondary-bg: #1f4068; /* Slightly lighter for cards/sections */
+  --accent-color: #e43f5a; /* Strong accent for buttons/highlights */
+  --text-light: #e0e0e0; /* Main text color */
+  --text-muted: #b0b0b0; /* Secondary text, labels */
+  --border-color: #555; /* Subtle borders */
+  --success-color: #4CAF50;
+  --error-color: #f44336;
+  --warning-color: #ff9800;
+
+  /* Font sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 1400px; /* Limit overall app width */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: darken(var(--accent-color), 10%);
+}
+
+button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--accent-color);
+  color: white;
+  font-size: var(--font-base);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: darken(var(--accent-color), 10%);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+}

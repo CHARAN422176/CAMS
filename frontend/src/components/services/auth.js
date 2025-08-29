@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
-const API_URL = 'http://localhost:5001/api/auth/';
+const API_URL = 'https://cams-nf34.onrender.com/api/auth/';
 
 const login = async (rollNo, password) => {
     const response = await axios.post(API_URL + 'login', { rollNo, password });

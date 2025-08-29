@@ -12,7 +12,7 @@ const StudentPortal = () => {
             try {
                 const token = localStorage.getItem('token');
                 const config = { headers: { 'x-auth-token': token } };
-                const res = await axios.get('http://localhost:5001/api/student/status', config);
+                const res = await axios.get('https://cams-nf34.onrender.com/api/student/status', config);
                 setStatus(res.data.currentStatus); // Set status from the server's response
             } catch (error) {
                 console.error("Could not fetch user status", error);
@@ -30,7 +30,7 @@ const StudentPortal = () => {
             const token = localStorage.getItem('token');
             const config = { headers: { 'x-auth-token': token } };
             // CORRECTED URL: Added port and fixed the endpoint path
-            await axios.post('http://localhost:5001/api/student/log-exit', { outingType }, config);
+            await axios.post('https://cams-nf34.onrender.com/student/log-exit', { outingType }, config);
             
             alert(`Your ${outingType} outing has been logged!`);
             setStatus(`${outingType} Outing`);
@@ -52,7 +52,7 @@ const StudentPortal = () => {
             const token = localStorage.getItem('token');
             const config = { headers: { 'x-auth-token': token } };
             // CORRECTED URL: Fixed the endpoint path
-            await axios.post('http://localhost:5001/api/student/log-entry', {}, config);
+            await axios.post('https://cams-nf34.onrender.com/api/student/log-entry', {}, config);
 
             alert('Welcome back! Your entry has been logged.');
             setStatus('Inside');

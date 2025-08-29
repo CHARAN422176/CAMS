@@ -27,8 +27,8 @@ const AdminDashboard = () => {
 
                 // Fetch both stats and lists in parallel for efficiency
                 const [statsRes, listsRes] = await Promise.all([
-                    axios.get('http://localhost:5001/api/admin/stats', config),
-                    axios.get('http://localhost:5001/api/admin/status-lists', config),
+                    axios.get('https://cams-nf34.onrender.com/api/admin/stats', config),
+                    axios.get('https://cams-nf34.onrender.com/api/admin/status-lists', config),
                 ]);
 
                 setStats(statsRes.data);
